@@ -10,19 +10,19 @@ function CourseRow({
   items: typeof courses;
   direction?: "left" | "right";
 }) {
-  const tripled = [...items, ...items, ...items];
+  const doubled = [...items, ...items];
 
   return (
     <div className="w-full overflow-hidden carousel-fade-light">
       <div
-        className={`flex ${
+        className={`flex w-max ${
           direction === "left" ? "animate-scroll-left" : "animate-scroll-right"
         }`}
       >
-        {tripled.map((course, i) => (
+        {doubled.map((course, i) => (
           <div
             key={`${course.code}-${i}`}
-            className="flex-shrink-0 mx-3 px-5 py-3 rounded-lg border border-gray-200 bg-gray-50 hover:border-light-blue-dim hover:bg-white transition-all duration-300 cursor-default"
+            className="flex-shrink-0 mx-3 px-5 py-3 rounded-lg border border-gray-200 bg-gray-50 hover:border-sbu-red hover:bg-white transition-all duration-300 cursor-default"
           >
             <div className="text-sm font-mono font-semibold text-black whitespace-nowrap">
               {course.code}
@@ -52,11 +52,11 @@ function CourseCarousel() {
 
 export default function Education() {
   return (
-    <section id="education" className="section-light relative overflow-hidden">
+    <section id="education" className="section-light relative overflow-x-clip -mt-1">
       {/* Transition from black */}
       <div className="absolute -top-1 left-0 right-0 h-24 bg-gradient-to-b from-black to-transparent pointer-events-none z-10" />
 
-      <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-5xl px-6 py-32 md:py-32">
         {/* School header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -75,7 +75,7 @@ export default function Education() {
               />
             </div>
             <div>
-              <h2 className="text-4xl md:text-6xl font-bold text-[#B81137] tracking-tight">
+              <h2 className="text-4xl md:text-6xl font-bold text-sbu-red tracking-tight">
                 {education.school}
               </h2>
               <p className="text-lg md:text-xl text-gray-500 mt-2">
@@ -87,24 +87,24 @@ export default function Education() {
             </div>
           </div>
 
-          {/* Honors / Accomplishments */}
-          <div className="grid grid-cols-3 gap-4 md:gap-6">
+          {/* Honors — compact stat chips */}
+          <div className="flex flex-wrap items-center gap-3 mt-2">
             {education.highlights.map((item, i) => (
-              <motion.div
+              <motion.span
                 key={item.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.12, duration: 0.5 }}
-                className="group relative rounded-xl border border-gray-200 bg-gray-50 p-5 md:p-6 text-center hover:border-light-blue-dim hover:shadow-[0_0_20px_rgba(125,211,252,0.12)] transition-all duration-300 flex flex-col justify-between min-h-[120px]"
+                transition={{ delay: i * 0.1, duration: 0.4 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 bg-gray-50 hover:border-sbu-red hover:bg-white transition-all duration-300 cursor-default"
               >
-                <div className="text-3xl md:text-4xl font-bold text-black group-hover:text-light-blue-dim transition-colors duration-300">
+                <span className="text-sm md:text-base font-bold text-sbu-red">
                   {item.value}
-                </div>
-                <div className="text-xs uppercase tracking-widest text-gray-400 mt-auto">
+                </span>
+                <span className="text-xs uppercase tracking-wider text-gray-400">
                   {item.label}
-                </div>
-              </motion.div>
+                </span>
+              </motion.span>
             ))}
           </div>
         </motion.div>
@@ -145,17 +145,49 @@ export default function Education() {
               >
                 <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
                   <div className="flex-shrink-0">
-                    <span className="text-sm font-mono font-bold text-light-blue-dim">
+                    <span className="text-sm font-mono font-bold text-sbu-red">
                       {course.code}
                     </span>
                   </div>
-                  <div>
-                    <h4 className="text-xl md:text-2xl font-semibold text-black mb-2">
-                      {course.name}
-                    </h4>
-                    <p className="text-gray-500 leading-relaxed">
-                      {course.description}
-                    </p>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-xl md:text-2xl font-semibold text-black mb-2">
+                        {course.name}
+                      </h4>
+                      <p className="text-gray-500 leading-relaxed">
+                        {course.description}
+                      </p>
+                    </div>
+
+                    {/* Projects */}
+                    <div>
+                      <h5 className="text-xs uppercase tracking-wider text-gray-400 mb-2">
+                        Projects
+                      </h5>
+                      <ul className="space-y-1">
+                        {course.projects.map((project, j) => (
+                          <li
+                            key={j}
+                            className="text-sm text-gray-600 leading-relaxed flex items-start gap-2"
+                          >
+                            <span className="text-sbu-red mt-1.5 text-[6px]">&#9679;</span>
+                            {project}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Tech */}
+                    <div className="flex flex-wrap gap-2">
+                      {course.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="px-3 py-1 text-xs font-mono rounded-full border border-gray-200 bg-gray-50 text-gray-600 hover:border-sbu-red hover:text-sbu-red transition-colors duration-200"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
                 {i < favoriteCourses.length - 1 && (
@@ -166,6 +198,9 @@ export default function Education() {
           </div>
         </motion.div>
       </div>
+
+      {/* Fade to next section (black) */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black pointer-events-none z-10" />
     </section>
   );
 }

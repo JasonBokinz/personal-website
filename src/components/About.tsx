@@ -7,13 +7,13 @@ import { Github, Linkedin, MapPin, Mail } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="section-dark min-h-screen flex items-center relative overflow-hidden">
+    <section id="about" className="section-dark min-h-screen flex items-center relative overflow-x-clip">
       {/* Subtle animated background gradient */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-light-blue/5 rounded-full blur-[150px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 py-24 md:py-32 w-full">
+      <div className="relative z-10 mx-auto max-w-5xl px-6 py-32 md:py-32 w-full">
         {/* === Top row: Photo | Name + bio === */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-16">
           {/* Photo + socials */}
@@ -105,10 +105,10 @@ export default function About() {
                 Science and a specialization in Artificial Intelligence. I joined an
                 EdTech startup from day one and helped scale it
                 to <span className="text-gray-200">80,000+ users</span> in under two
-                years, shipping features daily across the full stack from database
-                architecture to real-time AI systems. I care about writing clean code,
-                building intuitive interfaces, and solving problems that make a real
-                difference for users.
+                years, owning and building features end-to-end across the stack, from
+                frontend interfaces to backend systems and infrastructure. I care about writing
+                scalable code, building intuitive interfaces for the best user experience, and
+                solving problems that make a real difference for users.
               </p>
             </motion.div>
           </div>
@@ -154,10 +154,10 @@ export default function About() {
             <p className="text-xs uppercase tracking-widest text-gray-600 mb-4 text-center md:text-left">
               When I&apos;m not coding
             </p>
-            <div className="flex gap-4 justify-center md:justify-start">
+            <div className="grid grid-cols-4 gap-3 sm:gap-4">
               {hobbies.map((hobby) => (
                 <div key={hobby.label} className="group relative">
-                  <div className="relative w-28 h-36 sm:w-32 sm:h-40 rounded-xl overflow-hidden ring-1 ring-white/10 bg-gray-800">
+                  <div className="relative aspect-[7/9] rounded-xl overflow-hidden ring-1 ring-white/10 bg-gray-800">
                     <Image
                       src={hobby.image}
                       alt={hobby.label}

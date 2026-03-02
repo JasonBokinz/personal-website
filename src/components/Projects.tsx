@@ -5,11 +5,11 @@ import { projects } from "@/data/personal";
 
 export default function Projects() {
   return (
-    <section id="projects" className="section-light relative overflow-hidden">
+    <section id="projects" className="section-light relative overflow-x-clip -mt-1">
       {/* Transition from black */}
       <div className="absolute -top-1 left-0 right-0 h-24 bg-gradient-to-b from-black to-transparent pointer-events-none z-10" />
 
-      <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+      <div className="mx-auto max-w-5xl px-6 py-32 md:py-32">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,6 +84,9 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      {/* Fade to next section (black) */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-black pointer-events-none z-10" />
     </section>
   );
 }
