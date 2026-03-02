@@ -120,24 +120,14 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 relative w-8 h-8"
+            className={`md:hidden px-3 py-2 rounded-lg border text-sm font-medium transition-all duration-300 ${
+              onLightSection
+                ? "border-gray-300 text-black hover:bg-gray-100"
+                : "border-gray-700 text-white hover:bg-gray-800"
+            }`}
             aria-label="Toggle menu"
           >
-            <span
-              className={`absolute left-1 block h-px w-6 transition-all duration-500 ${
-                onLightSection ? "bg-black" : "bg-white"
-              } ${mobileOpen ? "top-1/2 rotate-45" : "top-2.5"}`}
-            />
-            <span
-              className={`absolute left-1 top-1/2 block h-px transition-all duration-500 ${
-                onLightSection ? "bg-black" : "bg-white"
-              } ${mobileOpen ? "w-0 opacity-0" : "w-4 opacity-100"}`}
-            />
-            <span
-              className={`absolute left-1 block h-px w-6 transition-all duration-500 ${
-                onLightSection ? "bg-black" : "bg-white"
-              } ${mobileOpen ? "top-1/2 -rotate-45" : "top-[18px]"}`}
-            />
+            {mobileOpen ? "Close" : "Menu"}
           </button>
         </div>
 
