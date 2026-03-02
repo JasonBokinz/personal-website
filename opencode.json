@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "loopflow": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "loopflow@latest",
+        "mcp"
+      ],
+      "enabled": true
+    }
+  }
+}

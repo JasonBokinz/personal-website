@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "loopflow": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "loopflow@latest",
+        "mcp"
+      ]
+    }
+  }
+}
