@@ -163,11 +163,11 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
-              <motion.button
-                onClick={() => {
-                  setMobileOpen(false);
-                  setResumeOpen(true);
-                }}
+              <motion.a
+                href="/Jason_Bokinz_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
@@ -175,7 +175,7 @@ export default function Navbar() {
                 className="mt-4 text-lg font-medium px-8 py-3 rounded-full border border-light-blue text-light-blue hover:bg-light-blue hover:text-black hover:shadow-[0_0_20px_rgba(125,211,252,0.3)] transition-all duration-300 cursor-pointer"
               >
                 Resume
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         )}

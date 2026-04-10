@@ -20,6 +20,23 @@ function LinkIcon() {
   );
 }
 
+function FormattedText({ text }: { text: string }) {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return (
+    <>
+      {parts.map((part, i) =>
+        i % 2 === 1 ? (
+          <span key={i} className="text-gray-200 font-medium">
+            {part}
+          </span>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
+}
+
 function VideoShowcase({
   showcase,
 }: {
@@ -71,34 +88,38 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
+            className={idx > 0 ? "mt-20" : ""}
           >
             {/* Company card: logo left, info right */}
             <div className="flex gap-5 md:gap-6 items-start mb-10 pb-10 border-b border-gray-800">
-              <img
-                src={exp.logo}
-                alt={`${exp.company} logo`}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain flex-shrink-0 rounded-lg"
-              />
+              <div className={`w-16 h-16 md:w-20 md:h-20 flex-shrink-0 rounded-lg overflow-hidden flex items-center justify-center ${exp.logoBg === "white" ? "bg-white p-2" : ""}`}>
+                <img
+                  src={exp.logo}
+                  alt={`${exp.company} logo`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-white">
                   {exp.company}
                 </h3>
                 <div className="flex flex-wrap items-center gap-2 text-sm text-gray-400 mt-1.5">
-                  <a
-                    href={exp.productUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-light-blue hover:text-white transition-colors duration-200"
-                  >
-                    {exp.productLabel}
-                    <LinkIcon />
-                  </a>
-                  <span className="text-gray-600">/</span>
+                  {exp.productUrl && exp.productLabel && (
+                    <>
+                      <a
+                        href={exp.productUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-light-blue hover:text-white transition-colors duration-200"
+                      >
+                        {exp.productLabel}
+                        <LinkIcon />
+                      </a>
+                      <span className="text-gray-600">/</span>
+                    </>
+                  )}
                   <span>{exp.location}</span>
                 </div>
-                <p className="text-sm text-gray-500 mt-1">
-                  January 2024 - Present
-                </p>
                 <p className="text-gray-400 text-sm mt-3">
                   {exp.summary}
                 </p>
@@ -130,13 +151,8 @@ export default function Experience() {
                     {role.period}
                   </span>
 
-                  {/* Summary */}
-                  <p className="text-gray-300 text-sm mt-3 mb-5">
-                    {role.summary}
-                  </p>
-
                   {/* Highlights */}
-                  <div className="space-y-3">
+                  <div className="space-y-3 mt-4">
                     {role.highlights.map((highlight, i) => (
                       <motion.div
                         key={i}
@@ -148,7 +164,7 @@ export default function Experience() {
                       >
                         <span className="flex-shrink-0 mt-2.5 w-1 h-1 rounded-full bg-gray-500 group-hover:bg-light-blue transition-colors duration-200" />
                         <p className="text-gray-400 leading-relaxed text-sm">
-                          {highlight}
+                          <FormattedText text={highlight} />
                         </p>
                       </motion.div>
                     ))}

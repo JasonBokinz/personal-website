@@ -115,47 +115,63 @@ export const experiences = [
     logo: "/images/whiz/wptp-logo.png",
     location: "West Palm Beach, FL",
     summary:
-      "AI-powered test prep platform for SAT, PSAT, and AP exams, used by 80,000+ students worldwide.",
+      "AI-powered EdTech learning platform serving 80,000+ users, built in a TurboRepo monorepo with Next.js, Expo (React Native), Express, and PostgreSQL via Prisma ORM.",
     roles: [
       {
         title: "Software Engineer",
-        period: "May 2025 - Present",
-        summary: "Building and designing features with added ownership over architecture, team leadership, and technical direction.",
+        period: "January 2024 - Present",
         highlights: [
-          "Led a team of three engineers in building an AI tutor using Next.js and OpenRouter to provide real-time explanations, tailored feedback, and step-by-step guidance for SAT, PSAT, and AP questions",
-          "Developed a role-based dashboard for a multi-tenant platform using Clerk, collaborating with the sales team and client organizations to tailor access controls, supporting onboarding for 30+ tutoring companies",
-          "Directed and managed a team of four engineering interns to build a personalized SAT study timeline that adjusts to student goals and performance, resulting in an average score increase of 150 points",
-          "Increased user retention by 40% by redesigning the exam layout, replacing popups with slide-in panels for tools like calculators and adding keyboard shortcuts to improve accessibility",
-        ],
-      },
-      {
-        title: "Software Engineer Intern",
-        period: "January 2024 - April 2025",
-        summary: "Writing code and shipping features daily, building the platform from its earliest stages.",
-        highlights: [
-          "Collaborated with product and content teams to create a personalized AI writing assistant using text embeddings, improving essay quality by 50% through inline suggestions and auto essay completions",
-          "Architected and led development of an AI-based essay grading system using Express and RabbitMQ to process batches via prompt engineering, reducing turnaround time from weeks to minutes across 10+ exam types",
-          "Implemented a practice mode that gathers missed and flagged questions from previous exams, leading to a 25% improvement in later test scores",
-          "Increased feature engagement by 60% by leading the design and development of a gamified leveling system with backend progression logic and visual level-up effects",
-          "Engineered a scalable PostgreSQL schema that supports over 8 question types, expanding test coverage and helping grow the user base by 250%",
-          "Led the refactor of the exam question form using React and Tailwind to handle all question types in a shared component, cutting frontend complexity by 60% and improving code maintainability",
-          "Drove the implementation of a real-time notification system using Bun WebSockets, coordinating across teams to increase return session rates by 30% and boost user engagement",
-          "Expanded the iOS and Android mobile app using React Native to support 15+ AP exams by translating web app Node.js functions into Express backend endpoints",
+          "Launched whiz.study, an AI-powered EdTech learning platform serving **80,000+ users**, built in a TurboRepo monorepo with **Next.js**, **Expo (React Native)**, **Express**, and **PostgreSQL** via Prisma ORM",
+          "Integrated a **Stripe** payment infrastructure including **subscription billing**, **one-time payments**, and a **free trial system** driving **1,600+ active subscriptions** and recurring revenue",
+          "Led a team of engineers in building an **AI tutor** using **OpenAI SDK** and **OpenRouter**, delivering step-by-step walkthroughs, real-time explanations, and tailored feedback that interacts with the student's workspace to guide them through problems",
+          "Refactored a tightly coupled monolith into a **modular, plugin-based structure** where each exam type is self-contained with its own implementation and architecture, reducing new exam type creation time by **~75%**",
+          "Expanded the iOS mobile app to support **40+ AP exams**, building new **React Native** views and **Express** backend endpoints to mirror existing web app functionality",
+          "Constructed a **concept-level knowledge graph (DAG)** to map topic dependencies, powering mastery tracking and personalized study recommendations across the platform",
         ],
       },
     ],
-    // Sorted: languages → frameworks → databases/ORMs → infra/tools
     tech: [
       "TypeScript", "SQL",
       "React", "Next.js", "React Native", "Express", "Node.js", "Tailwind",
       "PostgreSQL", "Prisma", "Redis",
-      "Clerk", "OpenRouter", "RabbitMQ", "Bun",
-      "Claude", "ChatGPT", "Gemini",
+      "Stripe", "OpenAI SDK", "OpenRouter", "RabbitMQ", "Bun",
     ],
-    showcases: [
-      // Add video showcases here as you get the mp4 files:
-      // { title: "AI Tutor", description: "...", video: "/videos/ai-tutor.mp4" },
+    showcases: [],
+  },
+  {
+    company: "Stony Brook University",
+    logo: "/images/sbu-seawolves.png",
+    logoBg: "white" as const,
+    location: "Stony Brook, NY",
+    summary:
+      "Research and engineering roles spanning financial simulations, automated data pipelines, and LLM hallucination reduction.",
+    roles: [
+      {
+        title: "Software Engineer Intern",
+        period: "September 2023 - December 2023",
+        highlights: [
+          "Built an automated web scraping pipeline using **Puppeteer** to extract current IRS tax bracket data across **4 tax categories**, parsing bracket rules across multiple filing statuses and persisting year-stamped records to **PostgreSQL**",
+          "Engineered a **Monte Carlo** simulation engine with parallel **Bun** workers to model long-term retirement outcomes, processing **48,000+** financial calculations per run including progressive tax computation, investment growth, and withdrawal optimization",
+          "Implemented financial algorithms including **Roth conversion** tax optimization, **Required Minimum Distribution** calculations, and custom asset liquidation strategies across **3 account types**, enabling users to simulate personalized withdrawal plans",
+        ],
+      },
+      {
+        title: "Machine Learning Researcher",
+        period: "May 2023 - August 2023",
+        highlights: [
+          "Developed an end-to-end **RAG pipeline** using **OpenAI ada-002** embeddings and **Pinecone** vector search, reducing **GPT-3.5-Turbo** hallucination",
+          "Benchmarked **zero-shot**, **few-shot**, and **chain-of-thought** prompting across **1,000+** **GPT-3.5-Turbo** and **GPT-4** responses, scoring factual consistency via **cosine similarity** against **ada-002** reference embeddings",
+        ],
+      },
     ],
+    tech: [
+      "TypeScript", "Python", "SQL",
+      "Puppeteer", "Bun", "Node.js",
+      "PostgreSQL",
+      "OpenAI SDK", "Pinecone", "LangChain",
+      "NumPy", "Pandas",
+    ],
+    showcases: [],
   },
 ];
 
