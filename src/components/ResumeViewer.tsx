@@ -60,7 +60,7 @@ export default function ResumeViewer({ isOpen, onClose }: ResumeViewerProps) {
                 <h3 className="text-white font-medium text-lg">Resume</h3>
                 <div className="flex items-center gap-3">
                   <a
-                    href="/Jason_Bokinz_Resume.pdf"
+                    href="/Jason_Bokinz_Resume_2026.pdf"
                     download
                     className="text-sm font-medium px-4 py-1.5 rounded-full border border-light-blue/50 text-light-blue hover:bg-light-blue hover:text-black transition-all duration-300"
                   >
@@ -90,7 +90,7 @@ export default function ResumeViewer({ isOpen, onClose }: ResumeViewerProps) {
               {/* PDF Embed */}
               <div className="flex-1 bg-gray-100">
                 <iframe
-                  src="/Jason_Bokinz_Resume.pdf"
+                  src="/Jason_Bokinz_Resume_2026.pdf"
                   className="w-full h-full"
                   title="Jason Bokinz Resume"
                 />
@@ -116,7 +116,7 @@ export default function ResumeViewer({ isOpen, onClose }: ResumeViewerProps) {
                 <h3 className="text-white font-medium">Resume</h3>
                 <div className="flex items-center gap-3">
                   <a
-                    href="/Jason_Bokinz_Resume.pdf"
+                    href="/Jason_Bokinz_Resume_2026.pdf"
                     download
                     className="text-sm font-medium px-4 py-1.5 rounded-full border border-light-blue/50 text-light-blue hover:bg-light-blue hover:text-black transition-all duration-300"
                   >
@@ -146,7 +146,7 @@ export default function ResumeViewer({ isOpen, onClose }: ResumeViewerProps) {
               {/* PDF Embed */}
               <div className="flex-1 bg-gray-100 overflow-auto">
                 <iframe
-                  src="/Jason_Bokinz_Resume.pdf"
+                  src="/Jason_Bokinz_Resume_2026.pdf"
                   className="w-full h-full"
                   title="Jason Bokinz Resume"
                   style={{ minHeight: "100%" }}

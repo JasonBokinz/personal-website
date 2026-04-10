@@ -164,7 +164,7 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="/Jason_Bokinz_Resume.pdf"
+                href="/Jason_Bokinz_Resume_2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
