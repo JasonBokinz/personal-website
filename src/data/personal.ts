@@ -8,10 +8,20 @@ export const personalInfo = {
   calendly: "https://calendly.com/jbokinz-dev/30min",
 };
 
-export const hobbies = [
+export const hobbies: {
+  label: string;
+  image: string;
+  scale?: number;
+  objectPosition?: string;
+}[] = [
   { label: "Basketball", image: "/images/hobbies/basketball.png" },
   { label: "Lifting", image: "/images/hobbies/lifting.png" },
-  { label: "Golfing", image: "/images/hobbies/golf.jpg" },
+  {
+    label: "Golfing",
+    image: "/images/hobbies/golf-v2.jpg",
+    scale: 1.25,
+    objectPosition: "center 30%",
+  },
   { label: "Beach", image: "/images/hobbies/beach.jpg" },
 ];
 

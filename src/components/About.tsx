@@ -162,7 +162,12 @@ export default function About() {
                       src={hobby.image}
                       alt={hobby.label}
                       fill
-                      className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                      className={`object-cover opacity-70 group-hover:opacity-100 transition-all duration-500 ${
+                        hobby.scale
+                          ? "scale-125 group-hover:scale-[1.3125]"
+                          : "group-hover:scale-105"
+                      }`}
+                      style={{ objectPosition: hobby.objectPosition ?? "center" }}
                       onError={(e) => {
                         (e.target as HTMLImageElement).style.display = "none";
                       }}
