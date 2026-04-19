@@ -114,8 +114,6 @@ export const experiences = [
     productLabel: "whiz.study",
     logo: "/images/whiz/wptp-logo.png",
     location: "West Palm Beach, FL",
-    summary:
-      "AI-powered EdTech learning platform serving 80,000+ users, built in a TurboRepo monorepo with Next.js, Expo (React Native), Express, and PostgreSQL via Prisma ORM.",
     roles: [
       {
         title: "Software Engineer",
@@ -128,14 +126,16 @@ export const experiences = [
           "Expanded the iOS mobile app to support **40+ AP exams**, building new **React Native** views and **Express** backend endpoints to mirror existing web app functionality",
           "Constructed a **concept-level knowledge graph (DAG)** to map topic dependencies, powering mastery tracking and personalized study recommendations across the platform",
         ],
+        tech: [
+          "TypeScript", "SQL",
+          "React", "Next.js", "React Native", "Express", "Node.js", "Tailwind",
+          "PostgreSQL", "Prisma", "Supabase",
+          "Stripe", "Clerk", "Resend",
+          "OpenAI SDK", "OpenRouter", "RabbitMQ", "Bun",
+        ],
       },
     ],
-    tech: [
-      "TypeScript", "SQL",
-      "React", "Next.js", "React Native", "Express", "Node.js", "Tailwind",
-      "PostgreSQL", "Prisma", "Redis",
-      "Stripe", "OpenAI SDK", "OpenRouter", "RabbitMQ", "Bun",
-    ],
+    tech: [],
     showcases: [],
   },
   {
@@ -143,34 +143,37 @@ export const experiences = [
     logo: "/images/sbu-seawolves.png",
     logoBg: "white" as const,
     location: "Stony Brook, NY",
-    summary:
-      "Research and engineering roles spanning financial simulations, automated data pipelines, and LLM hallucination reduction.",
     roles: [
       {
-        title: "Software Engineer Intern",
-        period: "September 2023 - December 2023",
+        title: "Student Software Developer",
+        period: "February 2025 - May 2025",
         highlights: [
           "Built an automated web scraping pipeline using **Puppeteer** to extract current IRS tax bracket data across **4 tax categories**, parsing bracket rules across multiple filing statuses and persisting year-stamped records to **PostgreSQL**",
           "Engineered a **Monte Carlo** simulation engine with parallel **Bun** workers to model long-term retirement outcomes, processing **48,000+** financial calculations per run including progressive tax computation, investment growth, and withdrawal optimization",
           "Implemented financial algorithms including **Roth conversion** tax optimization, **Required Minimum Distribution** calculations, and custom asset liquidation strategies across **3 account types**, enabling users to simulate personalized withdrawal plans",
         ],
+        tech: [
+          "TypeScript", "SQL",
+          "React", "Next.js", "Tailwind", "Express", "Node.js", "Bun",
+          "Puppeteer",
+          "PostgreSQL", "Prisma", "Supabase",
+        ],
       },
       {
-        title: "Machine Learning Researcher",
-        period: "May 2023 - August 2023",
+        title: "Student Machine Learning Researcher",
+        period: "September 2024 - December 2024",
         highlights: [
-          "Developed an end-to-end **RAG pipeline** using **OpenAI ada-002** embeddings and **Pinecone** vector search, reducing **GPT-3.5-Turbo** hallucination",
-          "Benchmarked **zero-shot**, **few-shot**, and **chain-of-thought** prompting across **1,000+** **GPT-3.5-Turbo** and **GPT-4** responses, scoring factual consistency via **cosine similarity** against **ada-002** reference embeddings",
+          "Developed an end-to-end **RAG pipeline** using **OpenAI text-embedding-3-large** embeddings and **Pinecone** vector search, reducing **GPT-4o-mini** hallucination",
+          "Benchmarked **zero-shot**, **few-shot**, and **chain-of-thought** prompting across **1,000+** **GPT-4o-mini** and **GPT-4o** responses, scoring factual consistency via **cosine similarity** against reference embeddings",
+        ],
+        tech: [
+          "Python",
+          "OpenAI SDK", "Pinecone", "LangChain",
+          "NumPy", "Pandas",
         ],
       },
     ],
-    tech: [
-      "TypeScript", "Python", "SQL",
-      "Puppeteer", "Bun", "Node.js",
-      "PostgreSQL",
-      "OpenAI SDK", "Pinecone", "LangChain",
-      "NumPy", "Pandas",
-    ],
+    tech: [],
     showcases: [],
   },
 ];

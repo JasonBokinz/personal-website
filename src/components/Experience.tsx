@@ -120,9 +120,6 @@ export default function Experience() {
                   )}
                   <span>{exp.location}</span>
                 </div>
-                <p className="text-gray-400 text-sm mt-3">
-                  {exp.summary}
-                </p>
               </div>
             </div>
 
@@ -169,21 +166,37 @@ export default function Experience() {
                       </motion.div>
                     ))}
                   </div>
+
+                  {/* Role-level tech tags */}
+                  {role.tech && role.tech.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-5">
+                      {role.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="px-3 py-1 text-xs font-mono rounded-full border border-gray-700 text-gray-400 hover:border-light-blue hover:text-light-blue transition-colors duration-200"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </motion.div>
               ))}
             </div>
 
             {/* Company-level tech tags */}
-            <div className="flex flex-wrap gap-2 mt-10 ml-8 md:ml-10">
-              {exp.tech.map((t) => (
-                <span
-                  key={t}
-                  className="px-3 py-1 text-xs font-mono rounded-full border border-gray-700 text-gray-400 hover:border-light-blue hover:text-light-blue transition-colors duration-200"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
+            {exp.tech.length > 0 && (
+              <div className="flex flex-wrap gap-2 mt-10 ml-8 md:ml-10">
+                {exp.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="px-3 py-1 text-xs font-mono rounded-full border border-gray-700 text-gray-400 hover:border-light-blue hover:text-light-blue transition-colors duration-200"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            )}
 
             {/* Video showcases */}
             {exp.showcases.length > 0 && (
