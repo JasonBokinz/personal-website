@@ -27,7 +27,7 @@ export const hobbies: {
 
 export const languages = [
   { name: "TypeScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
-  { name: "Python", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+  { name: "Python", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" },
   { name: "Java", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
   { name: "C", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" },
   { name: "Ruby", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" },
@@ -188,7 +188,7 @@ export const projects: Project[] = [
     name: "Retirement Planning Simulator",
     period: "Spring 2025",
     description:
-      "**4-person team project**. A **Monte Carlo** retirement simulator spawning a parallel **Bun** worker per path, simulating **40–60 year** horizons through a **10-stage** annual pipeline into year-by-year success-probability projections.",
+      "A **Monte Carlo** retirement simulator spawning a parallel **Bun** worker per path, simulating **40–60 year** horizons through a **10-stage** annual pipeline into year-by-year success-probability projections.",
     highlights: [
       "Implemented financial algorithms including **Roth conversion** bracket-fill optimization, **Required Minimum Distribution** calculations, and ordered asset liquidation across **3 account types**.",
       "Automated IRS data ingestion with **Puppeteer** scrapers across **4 IRS sources** (tax brackets, deductions, capital gains, RMD tables), persisting year-stamped records to **PostgreSQL**.",
@@ -210,7 +210,7 @@ export const projects: Project[] = [
     name: "RAG Hallucination Benchmarking",
     period: "Fall 2024",
     description:
-      "**Solo** methodology study on reducing LLM hallucination in educational Q&A. Developed an end-to-end **RAG pipeline** using **OpenAI text-embedding-3-large** embeddings and **Pinecone** vector search, grounding **GPT-4o-mini** responses in retrieved reference material.",
+      "A methodology study on reducing LLM hallucination in educational Q&A. Developed an end-to-end **RAG pipeline** using **OpenAI text-embedding-3-large** embeddings and **Pinecone** vector search, grounding **GPT-4o-mini** responses in retrieved reference material.",
     highlights: [
       "Benchmarked **zero-shot**, **few-shot**, and **chain-of-thought** prompting across **1,000+** **GPT-4o-mini** and **GPT-4o** responses, scoring factual consistency via **cosine similarity** against reference embeddings.",
       "Found retrieval grounding improved factual consistency across question types, with **chain-of-thought** prompting driving the largest gains on reasoning-heavy questions and diminishing returns on stronger models.",
