@@ -149,45 +149,13 @@ export default function Education() {
                       {course.code}
                     </span>
                   </div>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="text-xl md:text-2xl font-semibold text-black mb-2">
-                        {course.name}
-                      </h4>
-                      <p className="text-gray-500 leading-relaxed">
-                        {course.description}
-                      </p>
-                    </div>
-
-                    {/* Projects */}
-                    <div>
-                      <h5 className="text-xs uppercase tracking-wider text-gray-400 mb-2">
-                        Projects
-                      </h5>
-                      <ul className="space-y-1">
-                        {course.projects.map((project, j) => (
-                          <li
-                            key={j}
-                            className="text-sm text-gray-600 leading-relaxed flex items-start gap-2"
-                          >
-                            <span className="text-sbu-red mt-1.5 text-[6px]">&#9679;</span>
-                            {project}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Tech */}
-                    <div className="flex flex-wrap gap-2">
-                      {course.tech.map((t) => (
-                        <span
-                          key={t}
-                          className="px-3 py-1 text-xs font-mono rounded-full border border-gray-200 bg-gray-50 text-gray-600 hover:border-sbu-red hover:text-sbu-red transition-colors duration-200"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
+                  <div>
+                    <h4 className="text-xl md:text-2xl font-semibold text-black mb-2">
+                      {course.name}
+                    </h4>
+                    <p className="text-gray-500 leading-relaxed">
+                      {course.reflection}
+                    </p>
                   </div>
                 </div>
                 {i < favoriteCourses.length - 1 && (

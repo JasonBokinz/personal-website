@@ -3,6 +3,23 @@
 import { motion } from "framer-motion";
 import { projects } from "@/data/personal";
 
+function FormattedText({ text }: { text: string }) {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return (
+    <>
+      {parts.map((part, i) =>
+        i % 2 === 1 ? (
+          <span key={i} className="text-gray-900 font-medium">
+            {part}
+          </span>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
+}
+
 export default function Projects() {
   return (
     <section id="projects" className="section-light relative overflow-x-clip -mt-1">
@@ -31,50 +48,43 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-                    {project.name}
-                  </h3>
-                  <p className="text-gray-500 leading-relaxed mb-6 max-w-2xl">
-                    {project.description}
-                  </p>
+              {/* Heading row: name + period */}
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6 mb-1">
+                <h3 className="text-2xl md:text-3xl font-bold text-black">
+                  {project.name}
+                </h3>
+                <span className="text-sm text-gray-500 flex-shrink-0">
+                  {project.context ? `${project.context} · ${project.period}` : project.period}
+                </span>
+              </div>
 
-                  {/* Tech */}
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs font-mono text-gray-500 px-3 py-1.5 rounded-full border border-gray-200"
-                      >
-                        {t}
-                      </span>
-                    ))}
+              {/* Lead description */}
+              <p className="text-gray-500 leading-relaxed mt-4 mb-5 max-w-3xl">
+                <FormattedText text={project.description} />
+              </p>
+
+              {/* Highlights */}
+              <div className="space-y-3 mb-6">
+                {project.highlights.map((highlight, h) => (
+                  <div key={h} className="flex items-start gap-3 group">
+                    <span className="flex-shrink-0 mt-2.5 w-1 h-1 rounded-full bg-gray-400 group-hover:bg-light-blue-dim transition-colors duration-200" />
+                    <p className="text-gray-500 leading-relaxed text-sm max-w-2xl">
+                      <FormattedText text={highlight} />
+                    </p>
                   </div>
+                ))}
+              </div>
 
-                  {/* GitHub link */}
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-black hover:text-light-blue-dim transition-colors duration-300 underline underline-offset-4 decoration-gray-300 hover:decoration-light-blue-dim"
+              {/* Tech */}
+              <div className="flex flex-wrap gap-3">
+                {project.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="text-xs font-mono text-gray-500 px-3 py-1.5 rounded-full border border-gray-200"
                   >
-                    View on GitHub
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M7 17L17 7M17 7H7M17 7v10"
-                      />
-                    </svg>
-                  </a>
-                </div>
+                    {t}
+                  </span>
+                ))}
               </div>
 
               {i < projects.length - 1 && (

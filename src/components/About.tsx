@@ -104,11 +104,12 @@ export default function About() {
                 I graduated from Stony Brook University with a degree in Computer
                 Science and a specialization in Artificial Intelligence. I joined an
                 EdTech startup from day one and helped scale it
-                to <span className="text-gray-200">80,000+ users</span> in under two
-                years, owning and building features end-to-end across the stack, from
-                frontend interfaces to backend systems and infrastructure. I care about writing
-                scalable code, building intuitive interfaces for the best user experience, and
-                solving problems that make a real difference for users.
+                to <span className="text-gray-200">100,000+ users</span> in under two
+                years, owning features end to end across the stack. Instead of being
+                scared of AI like a lot of engineers, I learned how to use it to my
+                advantage, writing the docs, rules, and guardrails that keep tools
+                like <span className="text-gray-200">Claude Code</span>{" "}producing
+                clean, scalable code instead of sloppy work.
               </p>
             </motion.div>
           </div>
