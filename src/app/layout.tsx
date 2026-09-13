@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://jasonbokinz.com"),
   title: "Jason Bokinz | Full Stack Software Engineer",
   description:
-    "Full Stack Software Engineer. Built AI-powered products used by 80,000+ students. Stony Brook CS graduate, Magna Cum Laude.",
+    "Full Stack Software Engineer. Built AI-powered products used by 100,000+ users. Stony Brook CS graduate, Magna Cum Laude.",
   keywords: [
     "Jason Bokinz",
     "Full Stack Software Engineer",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jason Bokinz | Full Stack Software Engineer",
     description:
-      "Full Stack Software Engineer. Built AI-powered products used by 80,000+ students.",
+      "Full Stack Software Engineer. Built AI-powered products used by 100,000+ users.",
     type: "website",
     url: "https://jasonbokinz.com",
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jason Bokinz | Full Stack Software Engineer",
     description:
-      "Full Stack Software Engineer. Built AI-powered products used by 80,000+ students.",
+      "Full Stack Software Engineer. Built AI-powered products used by 100,000+ users.",
   },
 };
 

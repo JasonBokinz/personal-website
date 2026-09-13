@@ -149,23 +149,33 @@ export const experiences: Experience[] = [
     location: "West Palm Beach, FL",
     roles: [
       {
-        title: "Software Engineer (Intern → Full-Time, June 2025)",
-        period: "January 2024 - Present",
+        title: "Software Development Engineer II",
+        period: "June 2025 - Present",
         highlights: [
-          "Launched **whiz.study**, an AI-powered EdTech platform serving **100,000+ users** across web and iOS, owning full-stack development in a **TypeScript** monorepo (**Next.js**, **React Native**, **Express**, **PostgreSQL**).",
-          "Rebuilt the platform's **300,000+ line** monolith into a domain-driven architecture with a **3-engineer team** in under **4 months**, using **Claude Code** for large-scale refactoring.",
-          "Led a team of **3 engineers** to ship an agentic **AI tutor** driving **~80%** of paid subscriptions, guiding students through problems by graphing equations, eliminating answer choices, and surfacing reference material.",
-          "Built payment infrastructure spanning **Stripe** subscriptions, one-time payments, and a custom free-trial entitlement system, processing **1,600+ active paid subscriptions**.",
-          "Shipped **Question Bank**, a targeted practice product for drilling specific concepts and question types, built on shared abstractions and a **20-member contract** scaffolded across **41 exam modules**.",
-          "Engineered the codebase for agentic development, authoring architecture heuristics, extension checklists, and **CI-enforced architectural rules** that enable AI coding agents to make large changes safely.",
+          "Rebuilt a **300,000+ line** monolith into **domain-driven** modules with **2** other engineers in under **4 months**, sharing one ubiquitous language with the business, using **Claude Code** for large-scale refactoring.",
+          "Engineered the codebase to support **AI coding agents**, writing the **guardrail documentation** and **Claude Skills** that let them navigate and make large changes safely, with automated checks that block violations.",
+          "Led **2 engineers** in building an **AI content generation pipeline** that authors any kind of content for any exam, producing **75,000+ questions** gated on **quality evaluation** and **semantic deduplication** against published content.",
+          "Designed the **frontend SDK** by abstracting each part of the frontend into its own layer, from the branding styles through the **React** components to the stores, so any client can build on any layer.",
         ],
         tech: [
-          "TypeScript",
-          "React", "Next.js", "React Native", "Express", "Node.js", "Tailwind",
-          "PostgreSQL", "Prisma",
-          "Stripe",
-          "OpenAI SDK", "OpenRouter",
-          "GitHub Actions", "Claude Code",
+          "TypeScript", "Next.js", "React",
+          "Drizzle", "PostgreSQL", "pgvector",
+          "OpenRouter", "Claude Code",
+          "Vercel", "Docker",
+        ],
+      },
+      {
+        title: "Software Development Engineer Intern",
+        period: "January 2024 - June 2025",
+        highlights: [
+          "Launched **whiz.study** as a founding engineer, growing the AI-powered EdTech platform from zero to **100,000+ users** across iOS and web, maintaining the **TypeScript** business logic and **PostgreSQL** queries carrying that traffic.",
+          "Owned the platform's **top subscription driver**, an **agentic AI tutor** reading a question's content and additional tools provided like a calculator or reference sheet to walk students through the problem in words and on-screen cues.",
+          "Built payment infrastructure covering **Stripe** subscriptions, one-time payments, and a custom **free-trial entitlement system**, processing **1,600+ active paid subscriptions** across the platform.",
+          "Developed a **multi-tenant B2B** service in the same **monorepo** where organizations manage members under **role-based access control**, run classes, enroll students, assign homework, and track activity on the main platform.",
+        ],
+        tech: [
+          "TypeScript", "Next.js", "React Native", "Express", "Node.js",
+          "PostgreSQL", "Stripe", "OpenRouter",
         ],
       },
     ],
@@ -184,6 +194,17 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    name: "Iron Coach",
+    period: "2026",
+    description:
+      "Created a **weight training app** that logs every set from a **150+ exercise catalog** and tracks **each lift over time**, showing exactly which movements are getting stronger and which have stalled.",
+    highlights: [
+      "Architected an **agentic AI coach** that turns a fitness goal into a **full workout plan**, laying out every set down to the rep, grounded through **RAG** in training research and the user's own workout history.",
+      "Implemented **mid-workout suggestions** to maximize the next set's value toward the user's stated goal, weighing **recent sessions** of that lift against the set just logged.",
+    ],
+    tech: ["Java", "Spring Boot", "PostgreSQL", "SwiftUI"],
+  },
   {
     name: "Retirement Planning Simulator",
     period: "Spring 2025",

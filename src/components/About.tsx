@@ -102,12 +102,13 @@ export default function About() {
             >
               <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
                 I graduated from Stony Brook University with a degree in Computer
-                Science and a specialization in Artificial Intelligence. I joined an
-                EdTech startup from day one and helped scale it
-                to <span className="text-gray-200">100,000+ users</span> in under two
-                years, owning features end to end across the stack. Instead of being
-                scared of AI like a lot of engineers, I learned how to use it to my
-                advantage, writing the docs, rules, and guardrails that keep tools
+                Science and a specialization in Artificial Intelligence. I joined
+                whiz.study as a founding engineer, scaled it
+                to <span className="text-gray-200">100,000+ users</span>{" "}
+                in under two years, and now lead the platform&apos;s AI content pipeline as a
+                Software Development Engineer II. Instead of being scared of AI like
+                a lot of engineers, I learned how to use it to my advantage, writing
+                the docs, rules, and guardrails that keep tools
                 like <span className="text-gray-200">Claude Code</span>{" "}producing
                 clean, scalable code instead of sloppy work.
               </p>
