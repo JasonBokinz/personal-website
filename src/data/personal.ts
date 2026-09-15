@@ -154,7 +154,7 @@ export const experiences: Experience[] = [
         highlights: [
           "Rebuilt a **300,000+ line** monolith into **domain-driven** modules with **2** other engineers in under **4 months**, sharing one ubiquitous language with the business, using **Claude Code** for large-scale refactoring.",
           "Engineered the codebase to support **AI coding agents**, writing the **guardrail documentation** and **Claude Skills** that let them navigate and make large changes safely, with automated checks that block violations.",
-          "Led **2 engineers** in building an **AI content generation pipeline** that authors any kind of content for any exam, producing **75,000+ questions** gated on **quality evaluation** and **semantic deduplication** against published content.",
+          "Led **2** engineers in building an **AI content generation pipeline** that authors questions for **any exam**, producing **75,000+ questions** in **2 months**, saving nearly **$296,000** versus human authoring.",
           "Designed the **frontend SDK** by abstracting each part of the frontend into its own layer, from the branding styles through the **React** components to the stores, so any client can build on any layer.",
         ],
         tech: [
