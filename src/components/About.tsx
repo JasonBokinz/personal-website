@@ -101,16 +101,19 @@ export default function About() {
               className="max-w-2xl pt-2"
             >
               <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-                I graduated from Stony Brook University with a degree in Computer
-                Science and a specialization in Artificial Intelligence. I joined
-                whiz.study as a founding engineer, scaled it
-                to <span className="text-gray-200">100,000+ users</span>{" "}
-                in under two years, and now lead the platform&apos;s AI content pipeline as a
-                Software Development Engineer II. Instead of being scared of AI like
-                a lot of engineers, I learned how to use it to my advantage, writing
-                the docs, rules, and guardrails that keep tools
-                like <span className="text-gray-200">Claude Code</span>{" "}producing
-                clean, scalable code instead of sloppy work.
+                I&apos;m passionate about building AI products and building with AI,
+                along with the systems around both that let things scale confidently
+                and efficiently. As a founding engineer at whiz.study, a fast-moving
+                EdTech startup, I helped grow the platform to{" "}
+                <span className="text-gray-200">100,000+ users</span> in a year and a
+                half. I built the AI tutor that now powers{" "}
+                <span className="text-gray-200">1,600+ paid subscriptions</span> and
+                led Contentinator, an AI content generation pipeline that has saved{" "}
+                <span className="text-gray-200">$296,000</span>. I also co-led a
+                rebuild of 300,000 lines of code onto a new layered architecture in
+                four months, built to scale safely with{" "}
+                <span className="text-gray-200">AI coding agents</span>. I&apos;m
+                looking for my next team where I can bring that same kind of impact.
               </p>
             </motion.div>
           </div>
